@@ -1,0 +1,49 @@
+<h1 class="text-primary">Liste of residence</h1>
+<table class="table" border="1px">
+<!--     <tr>
+        <th>Id</th>
+        <th>nom</th>
+        <th>adresse</th>
+        <th >image</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let res of listResidences">
+        <td >{{res.id}}</td>
+        <td>{{res.name}}</td>
+        <td>{{res.address}}</td>
+        <td ><img width="50px" height="49px" src="{{res.image}}" alt="hedhi"></td>
+
+        <td><button (click)="Show(res.id)">Show appart</button></td>
+        
+             <td>
+
+                <ng-container *ngIf="idTest == res.id && Apptmp; else elseTemplate">
+                    <td>{{Apptmp.description}}</td>
+                </ng-container>
+                <ng-template #elseTemplate>
+                    <td *ngIf="iter==0 &&idTest != res.id " >{{showErr}}</td>
+                </ng-template>
+            </td>
+    </tr>
+     -->
+     <tr *ngFor="let res of listResidences">
+        <td>{{res.id}}</td>
+        <td>{{res.name}}</td>
+        <td>{{res.address}}</td>
+        <td><img width="50px" height="49px" src="{{res.image}}" alt="hedhi"></td>
+    
+        <td>
+            <button (click)="Show(res.id)">Show appart</button>
+        </td>
+    
+        <td>
+            <ng-container *ngIf="idTest == res.id">
+                <td *ngIf="Apptmp">{{showErr}}</td>
+                
+            </ng-container>
+        </td>
+
+    </tr> 
+</table>
+
+
