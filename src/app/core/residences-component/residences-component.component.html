@@ -35,15 +35,17 @@
         <td>
             <button (click)="Show(res.id)">Show appart</button>
         </td>
-    
-        <td>
+        
+      
+      <!--   <td>
             <ng-container *ngIf="idTest == res.id">
                 <td *ngIf="Apptmp">{{showErr}}</td>
                 
             </ng-container>
-        </td>
+        </td> -->
 
     </tr> 
+        <td ng-click="Show(res.id)"> {{showErr}}</td>
 </table>
 
 

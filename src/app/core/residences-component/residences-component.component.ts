@@ -8,13 +8,14 @@ import { Apartment } from '../models/Appartement';
   styleUrls: ['./residences-component.component.css']
 })
 export class ResidencesComponentComponent {
-
+  ListFav:any[]=[] ; 
   res!:Residence ;
     show!:String;
     showErr!:String;
     idTest:number=0;
     Apptmp: Apartment | null = null
     iter:number=0 ; 
+    buttonClicked = false;
 
   listResidences:Residence[]=[
        {id:1,name: 'El fel',address:'Borj Cedria',
@@ -33,7 +34,7 @@ export class ResidencesComponentComponent {
          
       {id:2,appartNum:2,floorNum:0,surface:130,terrace:'non',surfaceTerrace:0,category:'S+2',description:'AppartementS+2',residence:this.listResidences[1] }]
      
-      Show(a:number) {
+      Show(a:number):String {
      this.iter=0;
      this.showErr="";
      
@@ -51,7 +52,9 @@ export class ResidencesComponentComponent {
         if(this.iter==0){
           this.showErr="mafichou "; 
           console.log("mafichou") ; 
-        }    
+        } 
+        this.buttonClicked=true ;
+        return this.showErr ;   
           
 
         
