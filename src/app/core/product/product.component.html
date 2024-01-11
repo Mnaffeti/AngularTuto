@@ -1,0 +1,19 @@
+<h1>List of P</h1>
+<table class="table">
+    <tr (click)="choisir(item)" *ngFor="let item of ListP; let i=index">
+    
+    <td>
+       {{item.id}}
+    </td>
+    
+    <td>
+        {{item.nom}}
+    </td>
+    <td>
+       
+            {{item.prix}}
+       
+    </td>
+        
+    </tr>
+</table>

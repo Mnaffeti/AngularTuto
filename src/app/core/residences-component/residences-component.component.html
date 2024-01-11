@@ -35,6 +35,8 @@
         <td>
             <button (click)="Show(res.id)">Show appart</button>
         </td>
+
+        <td *ngIf="buttonClicked"> {{showErr}}</td>
         
       
       <!--   <td>
